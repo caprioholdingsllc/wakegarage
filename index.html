@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Garage Door | Same-Day Service & Emergency Repairs Available</title>
+    <meta name="description" content="Garage door services in Wake County. Same-day repairs, installations, and spring replacements across the Triangle.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #475569 0%, #334155 100%);
+            color: white;
+            padding: 1rem 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .phone {
+            font-size: 1.3rem;
+            font-weight: 600;
+            background: #fbbf24;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .availability-banner {
+            background: #fbbf24;
+            color: #000;
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        .hero {
+            background: #334155;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .availability-section {
+            background: #f1f5f9;
+            padding: 3rem 2rem;
+            margin: -3rem -2rem 3rem -2rem;
+        }
+        .availability-section h2 {
+            text-align: center;
+            color: #475569;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .availability-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #334155;
+        }
+        .availability-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .availability-card h3 {
+            color: #475569;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .availability-card .time {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #334155;
+            margin: 0.75rem 0;
+        }
+        .availability-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .services-section {
+            margin: 3rem 0;
+        }
+        .services-section h2 {
+            color: #475569;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .service-types {
+            margin-bottom: 3rem;
+        }
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .type-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+        }
+        .type-card h3 {
+            color: #475569;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .type-card .timeline {
+            background: #fef3c7;
+            color: #78350f;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .type-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #334155;
+        }
+        .service-card h3 {
+            color: #475569;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .form-section h2 {
+            color: #475569;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .form-section .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #334155;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #475569 0%, #334155 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            opacity: 0.95;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Triangle Garage Door</div>
+            <div class="phone">📞 (919) 635-9141</div>
+        </div>
+    </header>
+
+    <div class="availability-banner">
+        ⚡ Same-Day Service Available • Emergency Repairs • Free Estimates
+    </div>
+
+    <section class="hero">
+        <h1>Same-Day Service & Emergency Repairs Available</h1>
+        <p>Garage door repair and installation across Wake County. Fast response times.</p>
+    </section>
+
+    <div class="container">
+        <section class="availability-section">
+            <h2>Our Response Times & Availability</h2>
+            <div class="availability-grid">
+                <div class="availability-card">
+                    <div class="icon">📞</div>
+                    <h3>Phone Response</h3>
+                    <div class="time">Immediate</div>
+                    <p>Call anytime. We answer quickly and schedule service fast.</p>
+                </div>
+
+                <div class="availability-card">
+                    <div class="icon">🚗</div>
+                    <h3>Emergency Service</h3>
+                    <div class="time">Same Day</div>
+                    <p>Broken springs, door off track, or won't open? We prioritize emergencies.</p>
+                </div>
+
+                <div class="availability-card">
+                    <div class="icon">🔧</div>
+                    <h3>Standard Repairs</h3>
+                    <div class="time">1-2 Days</div>
+                    <p>Most repairs scheduled within 24-48 hours. Often same-day available.</p>
+                </div>
+
+                <div class="availability-card">
+                    <div class="icon">🏗️</div>
+                    <h3>Installations</h3>
+                    <div class="time">3-5 Days</div>
+                    <p>New door installations scheduled quickly. Measure to install typically 3-5 days.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-types">
+            <h2>Emergency vs. Scheduled Service</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <h3>🚨 Emergency Repairs</h3>
+                    <div class="timeline">Same-day priority</div>
+                    <p><strong>Broken springs, door won't open/close, door off track, or safety issues.</strong> We respond quickly—often same day. Your garage door is essential access to your home.</p>
+                </div>
+
+                <div class="type-card">
+                    <h3>📅 Scheduled Service</h3>
+                    <div class="timeline">Normal scheduling</div>
+                    <p><strong>Opener issues, routine maintenance, noisy doors, or installations.</strong> Scheduled within 1-2 days. Not urgent but still handled promptly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Garage Door Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Spring Replacement</h3>
+                    <p>Replace broken torsion and extension springs. Most common repair.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Opener Repair</h3>
+                    <p>Fix garage door openers. Remote programming and sensor issues.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Door Off Track</h3>
+                    <p>Realign and repair doors that came off track.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Panel Replacement</h3>
+                    <p>Replace damaged door panels without replacing entire door.</p>
+                </div>
+                <div class="service-card">
+                    <h3>New Installations</h3>
+                    <p>Install new garage doors and openers. Residential and commercial.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance</h3>
+                    <p>Tune-ups, lubrication, and preventive maintenance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Request Service</h2>
+            <p class="subtitle">Tell us about your garage door issue</p>
+            
+            <form id="leadForm" action="https://hook.us2.make.com/gzcbxb8x2e5xph37kjhm48ur4khvh7ir" method="POST">
+                <input type="hidden" name="site_id" value="WAKE-GARAGE-001">
+                <input type="hidden" name="market" value="Wake County">
+                <input type="hidden" name="industry" value="Garage Door Services">
+                <input type="hidden" name="lead_type" value="Service Request">
+                <input type="hidden" name="source_url" value="trianglegaragedoor.com">
+                
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service_type">Type of Service *</label>
+                    <select id="service_type" name="service_type" required>
+                        <option value="">Select...</option>
+                        <option value="Emergency - Won't Open">Emergency - Won't Open</option>
+                        <option value="Broken Spring">Broken Spring</option>
+                        <option value="Opener Issue">Opener Issue</option>
+                        <option value="Off Track">Off Track</option>
+                        <option value="Installation">New Installation</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Problem Description *</label>
+                    <textarea id="details" name="details" required placeholder="Describe what's happening with your garage door..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request Service</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Triangle Garage Door. Professional Garage Door Services.</p>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }).then(() => {
+                window.location.href = 'thanks.html';
+            }).catch(() => {
+                window.location.href = 'thanks.html';
+            });
+        });
+    </script>
+</body>
+</html>
